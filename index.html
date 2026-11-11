@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#0e2a1f">
+<meta name="theme-color" content="#fffaf0">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Corrida de Natal">
@@ -475,6 +475,104 @@ body.pc-scaled {
 /* ═══ ROBÔ A CELEBRAR (ecrã final) ═══ */
 .win-robot{width:clamp(76px,16vw,108px);height:auto;display:block;margin:0 auto 6px;animation:vbWinBounce .8s ease-in-out infinite alternate;filter:drop-shadow(0 0 12px #7dd3fc)}
 @keyframes vbWinBounce{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+/* ===== Estética "Hora do Código" — versão Natal: creme com pontinhos, contornos verde-escuro, sombras de botão ===== */
+:root{--ink:#0f2e1f;--sun:#ffd23f;--coral:#d42426;--mint:#6fd49a;--sky:#8fd6ee;--grape:#1b7f4a;--cream:#fffaf0;--soft:#3d5c4a;
+  --bg-deep:#fffaf0;--bg-mid:#fffaf0;--bg-card:#ffffff;--accent:#d42426;--accent2:#0f2e1f;--text:#0f2e1f;--text-soft:#3d5c4a;
+  --border:#0f2e1f;--shadow:#0f2e1f;--green:#2e8b57;--red:#d42426;}
+html,body{background:var(--cream) radial-gradient(rgba(212,36,38,.20) 1.4px,transparent 1.6px) 0 0/22px 22px;background-attachment:fixed;}
+body::before,#stars-cv{display:none !important;}
+#snow span{color:#7db9dc;opacity:.8;}
+.ctrl-btn{background:#fff;border:2.5px solid var(--ink);color:var(--ink);box-shadow:0 3px 0 var(--ink);}
+.ctrl-btn:active{transform:translateY(3px);box-shadow:none;}
+header{background:var(--cream);backdrop-filter:none;border-bottom:3px solid var(--ink);box-shadow:0 4px 0 var(--ink);}
+header h1{color:var(--ink);text-shadow:none;}
+.hd-sub{background:var(--sun);border:2px solid var(--ink);color:var(--ink);box-shadow:0 2px 0 var(--ink);}
+#loading-screen{background:var(--cream) radial-gradient(rgba(212,36,38,.20) 1.4px,transparent 1.6px) 0 0/22px 22px;}
+.loading-title{color:var(--ink);text-shadow:none;}
+.loading-robot,.win-robot{filter:drop-shadow(0 4px 0 rgba(15,46,31,.3)) !important;}
+.loading-dots span{border:2px solid var(--ink);}
+/* cartões */
+#setup-panel,#track-wrap,#q-box,#scoreboard,.win-card,#pause-overlay>div{background:#fff !important;border:3px solid var(--ink) !important;border-radius:24px !important;box-shadow:0 6px 0 var(--ink) !important;}
+#scoreboard,#q-box{border-radius:20px !important;}
+.setup-title,.track-hdr,.win-title{color:var(--ink);text-shadow:none;}
+.setup-section{color:var(--grape);}
+.diff-btn{background:#fff;color:var(--ink) !important;border:2.5px solid var(--ink) !important;box-shadow:0 3px 0 var(--ink);}
+.diff-btn.easy.active{background:var(--mint);box-shadow:0 3px 0 var(--ink);}
+.diff-btn.medium.active{background:var(--sun);box-shadow:0 3px 0 var(--ink);}
+.diff-btn.hard.active{background:var(--coral);color:#fff !important;box-shadow:0 3px 0 var(--ink);}
+.diff-btn:active{transform:translateY(3px);box-shadow:none;}
+.diff-desc{color:var(--soft);}
+#record-line,#record-badge{display:none !important;}
+.player-row{background:var(--cream);border:2px solid var(--ink);}
+.player-name-input{background:#fff !important;color:var(--ink) !important;border:2.5px solid var(--ink) !important;box-shadow:0 3px 0 var(--ink);}
+.player-name-input::placeholder{color:#7d9186;}
+.player-name-input:focus{border-color:var(--grape) !important;}
+.player-check{color:var(--grape);}
+.ptog{background:#fff;border:2.5px solid var(--ink);color:var(--ink);box-shadow:0 2px 0 var(--ink);}
+.ptog.on{background:var(--mint);color:var(--ink);border-color:var(--ink);}
+.ptog.cpu-on{background:var(--sky);color:var(--ink);border-color:var(--ink);}
+.btn-start,.btn-replay{background:var(--coral) !important;color:#fff !important;border:3px solid var(--ink) !important;box-shadow:0 5px 0 var(--ink) !important;text-shadow:0 2px 0 rgba(15,46,31,.35);}
+.btn-start:hover,.btn-replay:hover{transform:none;}
+.btn-start:active,.btn-replay:active{transform:translateY(4px) !important;box-shadow:0 1px 0 var(--ink) !important;}
+.car-carousel-arrow{background:#fff;border:2.5px solid var(--ink);color:var(--ink);box-shadow:0 2px 0 var(--ink);}
+.car-carousel-arrow:hover{background:var(--sun);}
+/* pista */
+.lane-label{color:var(--ink) !important;}
+.track-bar{background:linear-gradient(180deg,#d9f3fd 0%,#eef9ff 70%,#fff 100%) !important;border:2.5px solid var(--ink) !important;}
+.finish-flag{border-left:3px solid var(--ink);}
+.pts-badge{color:var(--ink);}
+#track-toggle{background:#fff;border:2.5px solid var(--ink);color:var(--ink);box-shadow:0 3px 0 var(--ink);}
+#track-toggle:hover{background:var(--sun);}
+/* pergunta */
+#cat-badge{background:var(--sun);border:2px solid var(--ink);color:var(--ink);box-shadow:0 2px 0 var(--ink);}
+#turn-label{color:var(--ink) !important;border:2px solid var(--ink) !important;box-shadow:0 2px 0 var(--ink);}
+#q-meta,#q-counter{color:var(--soft);}
+#q-progress-wrap{background:#e6f1ea;border:2px solid var(--ink);height:10px;}
+#q-text{color:var(--ink);text-shadow:none;}
+.opt{background:#fff;border:2.5px solid var(--ink);color:var(--ink);box-shadow:0 3px 0 var(--ink);}
+.opt:hover:not(:disabled){background:var(--sun);border-color:var(--ink);color:var(--ink);transform:none;box-shadow:0 3px 0 var(--ink);}
+.opt:active:not(:disabled){transform:translateY(3px);box-shadow:none;}
+.opt.correct{background:var(--mint) !important;border-color:var(--ink) !important;color:var(--ink) !important;box-shadow:0 3px 0 var(--ink);}
+.opt.wrong{background:#ffc9c9 !important;border-color:var(--ink) !important;color:#7a1012 !important;box-shadow:0 3px 0 var(--ink);}
+#feedback.ok{color:#0f7a4f;}
+#feedback.err{color:#b42318;}
+#tiebreak-banner{background:var(--sun);border:3px solid var(--ink);color:var(--ink);box-shadow:0 4px 0 var(--ink);}
+.score-row+.score-row{border-top:2px dashed rgba(15,46,31,.2);}
+.score-bar-wrap{background:#e6f1ea;border:2px solid var(--ink);}
+.signature{color:var(--soft);}
+/* robô e balão */
+#vb-main{filter:drop-shadow(0 4px 0 rgba(15,46,31,.3));}
+#vb-main:hover{filter:drop-shadow(0 4px 0 rgba(15,46,31,.45));}
+.bubble{--bc:#fff;background:#fff !important;border:3px solid var(--ink) !important;outline:none !important;color:var(--ink) !important;box-shadow:3px 3px 0 var(--ink) !important;}
+.bubble::after{border-top-color:var(--ink) !important;}
+.bubble::before{border-top-color:#fff !important;}
+/* pausa, contagem, fim */
+#pause-overlay{background:rgba(15,46,31,.55) !important;backdrop-filter:blur(3px);}
+#pause-overlay>div>div:first-child{color:var(--ink) !important;}
+#pause-overlay p{color:var(--soft) !important;}
+#pause-overlay button{border:3px solid var(--ink) !important;box-shadow:0 4px 0 var(--ink) !important;color:var(--ink) !important;background:#fff !important;}
+#pause-overlay button:first-child{background:var(--coral) !important;color:#fff !important;}
+#pause-overlay button:nth-child(2){background:var(--mint) !important;}
+#pause-overlay button:active{transform:translateY(3px);box-shadow:none !important;}
+#countdown-overlay{background:rgba(255,250,240,.94);}
+#countdown-num{color:var(--coral);text-shadow:0 5px 0 var(--ink);}
+#countdown-label{color:var(--ink);}
+.streak-badge{filter:drop-shadow(0 3px 0 var(--ink));}
+#win-overlay{background:rgba(15,46,31,.55);backdrop-filter:blur(3px);}
+.win-subtitle{color:var(--soft);}
+.pod-row{background:var(--cream);border:2.5px solid var(--ink);box-shadow:0 3px 0 var(--ink);}
+.pod-row:first-child{background:var(--sun);border-color:var(--ink) !important;}
+.pod-score{color:var(--soft);}
+#win-history>div:first-child{color:var(--ink) !important;}
+#history-content span[style*="9fffed"]{color:#0f7a4f !important;background:#dff5e4 !important;}
+#history-content span[style*="ffb3b3"]{color:#b42318 !important;background:#ffe3e3 !important;}
+#history-content>div{background:var(--cream) !important;border:2px solid var(--ink) !important;}
+/* festa ao acertar */
+.vb-celebrate{position:fixed;left:50%;top:26%;z-index:960;pointer-events:none;transform:translateX(-50%) rotate(-3deg);text-align:center;animation:celPop 1.6s cubic-bezier(.34,1.56,.64,1) forwards;}
+.vb-celebrate .cl-top{font-family:'Fredoka One',cursive;color:var(--grape);font-size:clamp(.9rem,3vw,1.2rem);background:#fff;border:3px solid var(--ink);border-radius:14px 14px 0 0;border-bottom:0;padding:.15rem 1rem 0;}
+.vb-celebrate .cl-main{font-family:'Fredoka One',cursive;color:var(--ink);font-size:clamp(1.5rem,6vw,2.4rem);background:var(--sun);border:3px solid var(--ink);border-radius:0 0 18px 18px;padding:.1rem 1.2rem .2rem;box-shadow:0 6px 0 var(--ink);white-space:nowrap;}
+@keyframes celPop{0%{transform:translateX(-50%) rotate(-3deg) scale(0);opacity:0}18%{transform:translateX(-50%) rotate(-3deg) scale(1.15);opacity:1}30%{transform:translateX(-50%) rotate(-3deg) scale(1)}80%{transform:translateX(-50%) rotate(-3deg) scale(1);opacity:1}100%{transform:translateX(-50%) translateY(-30px) rotate(-3deg) scale(.9);opacity:0}}
+
 </style>
 </head>
 <body>
@@ -529,7 +627,7 @@ body.pc-scaled {
       <button class="diff-btn medium" data-diff="medium">⭐⭐ Médio</button>
       <button class="diff-btn hard" data-diff="hard">⭐⭐⭐ Difícil</button>
     </div>
-    <p class="diff-desc" id="diff-desc">20 segundos · perguntas simples</p>
+    <p class="diff-desc" id="diff-desc">perguntas simples</p>
     <p class="diff-desc" id="record-line" style="margin-top:-.4rem;color:#ffd35a;font-weight:700;"></p>
     <div class="setup-section">👥 Jogadores</div>
     <div id="players-setup"></div>
@@ -1094,11 +1192,13 @@ function mixPool(list){
 
 /* ══ DIFICULDADES ══ */
 const DIFFS={
-  easy:{label:'Fácil',time:20,desc:'20 segundos · perguntas simples',filter:q=>q.diff===1},
-  medium:{label:'Médio',time:15,desc:'15 segundos · perguntas variadas',filter:q=>q.diff<=2},
-  hard:{label:'Difícil',time:10,desc:'10 segundos · todas as perguntas',filter:()=>true},
+  easy:{label:'Fácil',time:20,desc:'perguntas simples',filter:q=>q.diff===1},
+  medium:{label:'Médio',time:15,desc:'perguntas variadas',filter:q=>q.diff<=2},
+  hard:{label:'Difícil',time:10,desc:'todas as perguntas, sem pressas',filter:()=>true},
 };
 let curDiff='easy';
+/* Sem pressão: sem temporizador e sem recordes. Põe a false para voltar ao modo com tempo/recordes. */
+const SEM_TEMPO=true, SEM_RECORDES=true;
 
 /* ══ RECORDES (guardados no dispositivo, por dificuldade) ══ */
 const RECORDS_KEY='vb_corrida_natal_recordes_v1';
@@ -1118,6 +1218,7 @@ function getRecord(diff){
 function updateRecordLine(){
   const el=document.getElementById('record-line');
   if(!el)return;
+  if(SEM_RECORDES){el.textContent='';return;}
   const rec=getRecord(curDiff);
   el.textContent=rec?`🏆 Recorde: ${rec.score} pts — ${rec.name}`:'';
 }
@@ -1206,6 +1307,10 @@ let roundNum=0;  // current round (each player answers once per round)
 let fontScale=1;
 const Q_PER_PLAYER=10;
 const pCfg=[{on:true,name:'',cpu:false},{on:true,name:'',cpu:false},{on:false,name:'',cpu:false},{on:false,name:'',cpu:false}];
+/* nomes gravados neste dispositivo */
+const NAMES_KEY='vb_corrida_natal_nomes_v1';
+function saveNames(){try{localStorage.setItem(NAMES_KEY,JSON.stringify(pCfg.map(c=>c.cpu?'':(c.name||''))));}catch(e){}}
+(function loadNames(){try{const a=JSON.parse(localStorage.getItem(NAMES_KEY));if(Array.isArray(a))a.forEach((n,i)=>{if(pCfg[i]&&typeof n==='string')pCfg[i].name=n.slice(0,16);});}catch(e){}})();
 
 /* ══ SETUP ══ */
 document.querySelectorAll('.diff-btn').forEach(b=>b.addEventListener('click',()=>{
@@ -1278,7 +1383,7 @@ function buildSetup(){
     inp.disabled=!(isActive&&!isCpu);
     inp.id='pni-'+i;
     if(isCpu)inp.style.cssText='opacity:.4;font-style:italic;';
-    inp.oninput=function(){pCfg[i].name=this.value;if(this.value.trim()&&pCfg[i].cpu){pCfg[i].cpu=false;buildSetup();}};
+    inp.oninput=function(){pCfg[i].name=this.value;saveNames();if(this.value.trim()&&pCfg[i].cpu){pCfg[i].cpu=false;buildSetup();}};
 
     // Right button
     let btnEl;
@@ -1353,7 +1458,7 @@ function startGame(){
   roundNum=0;
   document.getElementById('setup-panel').style.display='none';
   document.getElementById('track-wrap').style.display='block';
-  document.getElementById('timer-wrap').style.display='block';
+  document.getElementById('timer-wrap').style.display=SEM_TEMPO?'none':'block';
   document.getElementById('q-wrap').style.display='block';
   document.getElementById('pause-btn').style.display='flex';
   if(window.vbApplyScale) requestAnimationFrame(()=>requestAnimationFrame(window.vbApplyScale));
@@ -1419,9 +1524,17 @@ function updateTrack(justScored){
   });
 }
 
+/* ══ FESTA AO ACERTAR ══ */
+function celebrate(top,main){
+  const d=document.createElement('div');d.className='vb-celebrate';
+  d.innerHTML='<div class="cl-top">'+top+'</div><div class="cl-main">'+main+'</div>';
+  document.body.appendChild(d);setTimeout(()=>d.remove(),1700);
+}
+
 /* ══ TEMPORIZADOR ══ */
 function startTimer(onTimeout){
   clearInterval(timerInt);
+  if(SEM_TEMPO)return;
   timerLeft=timerMax;
   updateTimerUI();
   timerInt=setInterval(()=>{
@@ -1558,6 +1671,7 @@ function answer(btn,correct,shuffled,opts){
       ?'Streak! +1 ponto bonus! 🔥'
       :['Correto! 🎉','Muito bem! ⭐','Fantástico! 🚀','Excelente! 💛','Acertaste! 🌟'][~~(Math.random()*5)];
     fb.className='ok';
+    celebrate(gotBonus?'Streak!':'Ho ho ho!',gotBonus?'+1 ponto 🔥':['Correto! 🎄','Muito bem! ⭐','Fantástico! 🎁','Acertaste! ❄️'][~~(Math.random()*4)]);
     bub(gotBonus?'Streak incrível! Ponto extra! 🔥':['Isso mesmo!','Uau, acertaste!','Boa resposta!','Incrível!'][~~(Math.random()*4)],false);
     const runner=document.getElementById(`runner-${curPlayer}`);
     if(runner){const r=runner.getBoundingClientRect();burst(r.left+40,r.top+20,18);}
@@ -1744,6 +1858,7 @@ function endGame(){
 
     // Recorde: só conta a melhor pontuação entre jogadores humanos
     const recordBadge=document.getElementById('record-badge');
+    if(SEM_RECORDES){recordBadge.style.display='none';return;}
     const topHuman=sorted.find(p=>!p.cpu);
     if(topHuman){
       const prevRec=getRecord(curDiff);
@@ -1847,7 +1962,7 @@ function togglePause(){
     overlay.style.display='none';
     btn.textContent='⏸';
     // Resume timer with remaining time
-    if(answering){
+    if(answering&&!SEM_TEMPO){
       timerInt=setInterval(()=>{
         timerLeft=Math.max(0,timerLeft-.1);
         updateTimerUI();
