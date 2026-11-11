@@ -1,5 +1,5 @@
 /* Service worker — Corrida de Natal (funciona offline depois da 1.ª visita) */
-const CACHE = 'vb-corrida-natal-v1';
+const CACHE = 'vb-corrida-natal-v2';
 const CORE = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
  
 self.addEventListener('install', e => {

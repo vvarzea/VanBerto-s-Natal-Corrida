@@ -567,6 +567,9 @@ header h1{color:var(--ink);text-shadow:none;}
 #history-content span[style*="9fffed"]{color:#0f7a4f !important;background:#dff5e4 !important;}
 #history-content span[style*="ffb3b3"]{color:#b42318 !important;background:#ffe3e3 !important;}
 #history-content>div{background:var(--cream) !important;border:2px solid var(--ink) !important;}
+/* pódio: trenós com tamanho certo (no original apareciam gigantes) e nomes legíveis */
+.pod-row>span>img{width:72px !important;height:60px !important;object-fit:contain;display:block;}
+.pod-row span[style*="font-weight:900"]{color:var(--ink) !important;}
 /* festa ao acertar */
 .vb-celebrate{position:fixed;left:50%;top:26%;z-index:960;pointer-events:none;transform:translateX(-50%) rotate(-3deg);text-align:center;animation:celPop 1.6s cubic-bezier(.34,1.56,.64,1) forwards;}
 .vb-celebrate .cl-top{font-family:'Fredoka One',cursive;color:var(--grape);font-size:clamp(.9rem,3vw,1.2rem);background:#fff;border:3px solid var(--ink);border-radius:14px 14px 0 0;border-bottom:0;padding:.15rem 1rem 0;}
